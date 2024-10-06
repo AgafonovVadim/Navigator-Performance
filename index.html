@@ -6,101 +6,99 @@
   <meta name="keywords" content="авто, автомобиль, машина, тюнинг, ателье, производительность, улучшение, оптимизация">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NAVIGATOR PERFORMANCE</title>
-  <link rel="stylesheet" href="outline.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-  <h1>NAVIGATOR PERFORMANCE</h1>
-  <nav>
-    <ul>
-      <li><a href="#services">Услуги</a></li>
-      <li><a href="#prieces">Цены</a></li>
-      <li><a href="#contacts">Контакты</a></li>
-    </ul>
-  </nav>
+    <a class="logo" href="index.html">NAVIGATOR PERFORMANCE</a>
+    <div class="right-section">
+        <nav>
+            <ul>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#prices">Цены</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <div class="contact-info">
+            <div class="contact-details">
+                <span>Служба продаж</span>
+                <span>+7 812 488-0-488</span>
+            </div>
+            <button class="button">Записаться</button>
+        </div>
+    </div>
 </header>
 
 <main>
-  <h1>Тюнинг-ателье нового уровня</h1>
-  <h6>Эстетичность, эффективность, безупречность</h6>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Тюнинг-ателье нового уровня</h1>
+            <p>Эстетичность, эффектность, безупречность</p>
+            <div class="buttons">
+                <button class="left-button">Связаться с нами</button>
+                <button class="right-button">Выполненные работы</button>
+            </div>
+        </div>
+    </section>
+    <section class="services">
+        <h2>Услуги</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <img src="img/detailing.webp" alt="Детейлинг">
+                <div class="service-text">Детейлинг</div>
+            </div>
+            <div class="service-item">
+                <img src="img/power2.jpg" alt="Мощностной тюнинг">
+                <div class="service-text">Мощностной тюнинг</div>
+            </div>
+            <div class="service-item">
+                <img src="img/hypercar.jpg" alt="ТО суперкаров">
+                <div class="service-text">ТО суперкаров</div>
+            </div>
+            <div class="service-item">
+                <img src="img/lc200.jpg" alt="Выездное обслуживание">
+                <div class="service-text">Выездное обслуживание</div>
+            </div>
+            <div class="service-item">
+                <img src="img/extra_porsche.jpg" alt="Кузовные доработки">
+                <div class="service-text">Кузовные доработки</div>
+            </div>
+            <div class="service-item">
+                <img src="img/competition.jpg" alt="Подготовка к соревнованиям">
+                <div class="service-text">Подготовка к соревнованиям</div>
+            </div>
+        </div>
+    </section>
 
 
-  <section id="about">
-    <h2>О нас</h2>
-    <p>NAVIGATOR PERFORMANCE тюнинг-ателье, создающее предметы искусства из автомобилей.</p>
-  </section>
+    <article class="quote">
+        <blockquote class="quote-block">
+            <div class="quote-symbol">“”</div>
+            <p class="quote-text">Все началось с того, что я огляделся по сторонам и, не увидев автомобиля своей мечты, решил сконструировать его сам</p>
+            <cite class="quote-author">— Фердинанд Порше</cite>
+        </blockquote>
+    </article>
 
-  <section id="services">
-    <h2>Наши услуги</h2>
-    <ul>
-      <li>Детейлинг</li>
-      <li>Мощностной тюнинг</li>
-      <li>ТО суперкаров</li>
-      <li>Выездное обслуживание</li>
-      <li>Кузовные доработки</li>
-      <li>Подготовка к соревнованиям</li>
-    </ul>
-  </section>
 
-  <article>
-    <h3>Наши преимущества</h3>
-    <p><strong>Мастера своего дела</strong> Наши сотрудники — профессионалы со стажем работы от 5 лет.</p>
-    <p><strong>Быстро</strong> Выполним работу в максимально короткие сроки.</p>
-    <p><strong>Качественное оборудование</strong> Оборудование от лучших производителей.</p>
-    <p><strong>Гарантия качества</strong> Гарантия от 1 года на все виды работ.</p>
-      <p><strong> Простая формула успеха:</strong> car + work * log<sub>2</sub>(time) = A work of art </p>
-  </article>
-
-  <article id="quote">
-    <blockquote>
-      <p>Все началось с того, что я огляделся по сторонам и, <br>
-      не увидев автомобиля своей мечты, решил сконструировать его сам.</p>
-      <cite><strong>Фердинанд Порше</strong></cite>
-    </blockquote>
-  </article>
-
-  <article>
-    <pre>
-              ____----------- _____
-\~~~~~~~~~~/~_--~~~------~~~~~     \
- `---`\  _-~      |                   \
-   _-~  [_         |                     \[]
- / ___     ~~--[""] |      ________-------'_
-> /~` \    |-.   `\~~.~~~~~                _ ~ - _
- ~|  ||\%  |       |    ~  ._                ~ _   ~ ._
-   `_//|_%  \      |          ~  .              ~-_   /\
-          `--__     |    _-____  /\               ~-_ \/.
-               ~--_ /  ,/ -~-_ \ \/          _______---~/
-                   ~~-/._<   \ \`~~~~~~~~~~~~~     ##--~/
-                         \    ) |`------##---~~~~-~  ) )
-                          ~-_/_/                  ~~ ~~
-    </pre>
-  </article>
-
-  <aside>
-    <h4>Код:</h4>
-    <pre><code>
-                &lt;html&gt;
-                    &lt;body&gt;
-                        Пример кода
-                    &lt;/body&gt;
-                &lt;/html&gt;
-            </code></pre>
-  </aside>
 </main>
 
+
 <footer>
+    <nav>
+        <ul>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#news">Новости</a></li>
+            <li><a href="#help">Помощь</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+    </nav>
 
-  <nav>
-    <ul>
-      <li><a href="#about">О нас</a></li>
-      <li><a href="#news">Новости</a></li>
-      <li><a href="#help">Помощь</a></li>
-      <li><a href="#contacts">Контакты</a></li>
-    </ul>
-  </nav>
-
-  <p>&copy; 2024 NAVIGATOR PERFORMANCE. Все права защищены.</p>
+    <div class="copyright">
+        &copy; 2024 Navigator Performance
+    </div>
 </footer>
+
 </body>
 </html>
