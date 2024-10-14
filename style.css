@@ -10,6 +10,145 @@
     url(/fonts/Geologica.ttf);
 }
 
+/* Скрыть элемент на экранах меньше 768px */
+@media screen and (max-width: 768px) {
+    .contact-info {
+        display: none; /* Скрыть блок с контактами */
+    }
+
+    /* Перестроить сетку услуг в один столбец */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Сетка для расписания */
+    .schedule-grid {
+        display: grid; /* Use grid layout */
+        grid-template-columns: 150px repeat(2, 1fr); /* 1 fixed column (Time) + 2 flexible columns */
+    }
+
+    /* Скрываем некоторые колонки для экрана меньше 768px */
+    .schedule-grid:nth-child(-6n + 3) {
+        display: none;
+    }
+
+    .schedule-grid .time-column + div {
+        flex-grow: 1;
+    }
+
+
+}
+
+/* Правка для мобильных устройств и маленьких экранов */
+@media screen and (max-width: 480px) {
+    /* Переключаемся на flex-верстку для небольших экранов */
+    .services-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+
+    .schedule-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Все элементы сетки занимают 100% ширины */
+    .schedule-grid > div {
+        width: 100%;
+    }
+
+    /* Колонка времени остается фиксированной по ширине */
+    .schedule-grid .time-column {
+        width: 150px;
+        flex-shrink: 0;
+    }
+
+    /* Остальные колонки адаптируются */
+    .schedule-grid .time-column + div {
+        flex-grow: 2;
+    }
+}
+
+
+
+
+
+.schedule h2 {
+    font-size: 4rem;
+    margin-bottom: 80px;
+    color: #1b1b1b;
+}
+
+section.schedule {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ECEDF0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* Fixed width for the first column, flexible width for the others */
+    gap: 6px;
+    background-color: #ECEDF0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.schedule-grid div {
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    overflow: hidden; /* Prevent content from overflowing */
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-overflow: ellipsis; /* Add "..." if the text overflows */
+    font-weight: bold;
+
+}
+
+.schedule-grid div.header{
+    background-color: #FFFFFF;
+    color: #1b1b1b;
+}
+
+.schedule-grid div.header.hide {
+    background-color: #ECEDF0;
+}
+/*.schedule-grid div.header.weekday  {*/
+/*    background-color: #717275;*/
+/*}*/
+
+/*.schedule-grid div.header.weekend {*/
+/*    background-color: #A28A84;*/
+/*}*/
+
+.schedule-grid div.time-column {
+    font-weight: bold;
+    background-color: #ffffff;
+    color: #1b1b1b;
+}
+
+.occupied {
+    background-color: #ff6b6b;
+    color: #ffffff;
+}
+
+.free {
+    background-color: #42b883;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -28,6 +167,11 @@ body {
 
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,12 +180,27 @@ header {
     color: white;
 }
 
-.logo {
+.logo-big {
     text-decoration: none;
-    font-size: 24px;
+    font-size: 30px;
     color: white;
-    font-family: 'System Font Logo', serif;
+    font-family: 'System Font Logo', sans-serif;
 }
+
+.logo-small {
+    text-decoration: none;
+    font-size: 2.2vw;
+    color: white;
+    font-family: 'System Font Logo', sans-serif;
+}
+
+.logo-ultra-small {
+    text-decoration: none;
+    font-size: 1.8vw;
+    color: white;
+    font-family: 'System Font Logo', sans-serif;
+}
+
 
 .right-section {
     display: flex;
@@ -78,11 +237,48 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 1.5vw;
+
 }
 
-.contact-details span {
-    font-size: 16px;
+@media screen and (max-width: 760px) {
+    .logo-small {
+        display: none;
+    }
+    .logo-big {
+        display: none;
+    }
+    .contact-details {
+        display: none;
+    }
 }
+
+@media screen and (min-width: 760px) and (max-width: 1023px) {
+    .logo-ultra-small {
+        display: none;
+    }
+    .logo-big {
+        display: none;
+    }
+
+    .contact-details {
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .logo-ultra-small {
+        display: none;
+    }
+    .logo-small {
+        display: none;
+    }
+}
+
+
+
+
+
 
 .button {
     background-color: #007bff;
@@ -177,7 +373,7 @@ nav ul li a:hover {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     padding: 0 10%;
     margin-bottom: 150px;
