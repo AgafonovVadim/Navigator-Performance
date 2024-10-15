@@ -27,7 +27,7 @@ section.schedule {
 
 .schedule-grid {
     display: grid;
-    grid-template-columns: 150px 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* Fixed width for the first column, flexible width for the others */
+    grid-template-columns: 200px 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* Fixed width for the first column, flexible width for the others */
     gap: 6px;
     background-color: #ECEDF0;
     border-radius: 10px;
@@ -42,12 +42,14 @@ section.schedule {
     white-space: nowrap; /* Prevent text from wrapping */
     text-overflow: ellipsis; /* Add "..." if the text overflows */
     font-weight: bold;
+    font-size: 20px;
 
 }
 
 .schedule-grid div.header{
     background-color: #FFFFFF;
     color: #1b1b1b;
+    line-height: 8px;
 
 }
 
@@ -56,6 +58,7 @@ section.schedule {
 }
 
 .schedule-grid div.time-column {
+    font-size: 20px;
     background-color: #ffffff;
     color: #1b1b1b;
 }
