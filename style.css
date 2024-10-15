@@ -38,7 +38,6 @@ section.schedule {
     border-radius: 5px;
     padding: 20px;
     text-align: center;
-    font-size: 0.938vw;
     overflow: hidden; /* Prevent content from overflowing */
     white-space: nowrap; /* Prevent text from wrapping */
     text-overflow: ellipsis; /* Add "..." if the text overflows */
@@ -49,6 +48,7 @@ section.schedule {
 .schedule-grid div.header{
     background-color: #FFFFFF;
     color: #1b1b1b;
+
 }
 
 .schedule-grid div.header.hide {
@@ -56,7 +56,6 @@ section.schedule {
 }
 
 .schedule-grid div.time-column {
-    font-weight: bold;
     background-color: #ffffff;
     color: #1b1b1b;
 }
@@ -64,11 +63,13 @@ section.schedule {
 .occupied {
     background-color: #ff6b6b;
     color: #ffffff;
+    font-weight: 900;
 }
 
 .free {
     background-color: #42b883;
     color: #ffffff;
+    font-weight: 900;
 }
 
 
@@ -190,7 +191,7 @@ nav ul li a:hover {
 .hero {
     position: relative;
     height: 100vh;
-    background: url('img/preview.webp') no-repeat center center/cover;
+    background: url('img/preview-darken.webp') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -312,7 +313,7 @@ nav ul li a:hover {
     width: 100%;
     text-align: center;
     color: #fff;
-    font-size: 2vw;
+    font-size: 32px;
     font-weight: bold;
     padding: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -410,23 +411,12 @@ footer nav ul li a:hover {
 
 /*<----media zone--->*/
 
-
 /* Правка для мобильных устройств и маленьких экранов */
 @media screen and (max-width: 479px) {
     /* Переключаемся на flex-верстку для небольших экранов */
     .services-grid {
         grid-template-columns: repeat(1, 1fr);
     }
-}
-
-
-
-
-@media screen and (min-width: 480px) and (max-width: 767px) {
-    .contact-details {
-        display: none; /* Скрыть блок с контактами */
-    }
-
     /*<---logo block--->*/
     .logo-small {
         display: none;
@@ -437,6 +427,14 @@ footer nav ul li a:hover {
     .contact-details {
         display: none;
     }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .contact-details {
+        display: none; /* Скрыть блок с контактами */
+    }
+
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
