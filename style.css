@@ -10,70 +10,6 @@
     url(/fonts/Geologica.ttf);
 }
 
-/* Скрыть элемент на экранах меньше 768px */
-@media screen and (max-width: 768px) {
-    .contact-info {
-        display: none; /* Скрыть блок с контактами */
-    }
-
-    /* Перестроить сетку услуг в один столбец */
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Сетка для расписания */
-    .schedule-grid {
-        display: grid; /* Use grid layout */
-        grid-template-columns: 150px repeat(2, 1fr); /* 1 fixed column (Time) + 2 flexible columns */
-    }
-
-    /* Скрываем некоторые колонки для экрана меньше 768px */
-    .schedule-grid:nth-child(-6n + 3) {
-        display: none;
-    }
-
-    .schedule-grid .time-column + div {
-        flex-grow: 1;
-    }
-
-
-}
-
-/* Правка для мобильных устройств и маленьких экранов */
-@media screen and (max-width: 480px) {
-    /* Переключаемся на flex-верстку для небольших экранов */
-    .services-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-
-
-    .schedule-grid {
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Все элементы сетки занимают 100% ширины */
-    .schedule-grid > div {
-        width: 100%;
-    }
-
-    /* Колонка времени остается фиксированной по ширине */
-    .schedule-grid .time-column {
-        width: 150px;
-        flex-shrink: 0;
-    }
-
-    /* Остальные колонки адаптируются */
-    .schedule-grid .time-column + div {
-        flex-grow: 2;
-    }
-}
-
-
-
-
-
 .schedule h2 {
     font-size: 4rem;
     margin-bottom: 80px;
@@ -102,7 +38,7 @@ section.schedule {
     border-radius: 5px;
     padding: 20px;
     text-align: center;
-    font-size: 18px;
+    font-size: 0.938vw;
     overflow: hidden; /* Prevent content from overflowing */
     white-space: nowrap; /* Prevent text from wrapping */
     text-overflow: ellipsis; /* Add "..." if the text overflows */
@@ -118,13 +54,6 @@ section.schedule {
 .schedule-grid div.header.hide {
     background-color: #ECEDF0;
 }
-/*.schedule-grid div.header.weekday  {*/
-/*    background-color: #717275;*/
-/*}*/
-
-/*.schedule-grid div.header.weekend {*/
-/*    background-color: #A28A84;*/
-/*}*/
 
 .schedule-grid div.time-column {
     font-weight: bold;
@@ -237,47 +166,9 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 1.5vw;
+    font-size: 1vw;
 
 }
-
-@media screen and (max-width: 760px) {
-    .logo-small {
-        display: none;
-    }
-    .logo-big {
-        display: none;
-    }
-    .contact-details {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 760px) and (max-width: 1023px) {
-    .logo-ultra-small {
-        display: none;
-    }
-    .logo-big {
-        display: none;
-    }
-
-    .contact-details {
-        font-size: 1.5vw;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .logo-ultra-small {
-        display: none;
-    }
-    .logo-small {
-        display: none;
-    }
-}
-
-
-
-
 
 
 .button {
@@ -286,7 +177,7 @@ nav ul li a:hover {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1vw;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -421,7 +312,7 @@ nav ul li a:hover {
     width: 100%;
     text-align: center;
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 2vw;
     font-weight: bold;
     padding: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -516,6 +407,69 @@ footer nav ul li a:hover {
 
 
 
+
+/*<----media zone--->*/
+
+
+/* Правка для мобильных устройств и маленьких экранов */
+@media screen and (max-width: 479px) {
+    /* Переключаемся на flex-верстку для небольших экранов */
+    .services-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .contact-details {
+        display: none; /* Скрыть блок с контактами */
+    }
+
+    /*<---logo block--->*/
+    .logo-small {
+        display: none;
+    }
+    .logo-big {
+        display: none;
+    }
+    .contact-details {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /*<---logo block--->*/
+    .logo-ultra-small {
+        display: none;
+    }
+    .logo-big {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /*<---logo block--->*/
+    .logo-ultra-small {
+        display: none;
+    }
+    .logo-small {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .schedule {
+        display: none;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 
 
