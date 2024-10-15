@@ -24,7 +24,7 @@ function generateSchedule() {
         dayName.textContent = daysOfWeek[i];
 
         const dateElement = document.createElement('div');
-        dateElement.textContent = date.toLocaleDateString('ru-RU');
+        dateElement.textContent = date.toLocaleDateString('ru-RU').substring(0, 5);
 
         dayHeader.appendChild(dayName);
         dayHeader.appendChild(dateElement);
