@@ -411,11 +411,9 @@ footer nav ul li a:hover {
 
 
 
-/*<----media zone--->*/
+/*<----media block--->*/
 
-/* Правка для мобильных устройств и маленьких экранов */
 @media screen and (max-width: 479px) {
-    /* Переключаемся на flex-верстку для небольших экранов */
     .services-grid {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -449,7 +447,7 @@ footer nav ul li a:hover {
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
     .contact-details {
-        display: none; /* Скрыть блок с контактами */
+        display: none;
     }
     .logo-ultra-small {
         display: none;
