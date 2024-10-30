@@ -10,6 +10,77 @@
     url(/fonts/Geologica.ttf);
 }
 
+.schedule h2 {
+    font-size: 4rem;
+    margin-bottom: 80px;
+    color: #1b1b1b;
+}
+
+section.schedule {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ECEDF0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* Fixed width for the first column, flexible width for the others */
+    gap: 6px;
+    background-color: #ECEDF0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.schedule-grid div {
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden; /* Prevent content from overflowing */
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-overflow: ellipsis; /* Add "..." if the text overflows */
+    font-weight: 700;
+    font-size: 20px;
+
+}
+
+.schedule-grid div.header {
+    background-color: #FFFFFF;
+    color: #1b1b1b;
+    line-height: 8px;
+
+}
+
+.schedule-grid div.header.hide {
+    background-color: #ECEDF0;
+}
+
+.schedule-grid div.time-column {
+    background-color: #ffffff;
+    color: #1b1b1b;
+}
+
+.occupied {
+    background-color: #ff6b6b;
+    color: #ffffff;
+    font-weight: 900;
+}
+
+.free {
+    background-color: #42b883;
+    color: #ffffff;
+    font-weight: 900;
+}
+
+
+
+
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -28,6 +99,11 @@ body {
 
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,12 +112,27 @@ header {
     color: white;
 }
 
-.logo {
+.logo-big {
     text-decoration: none;
-    font-size: 24px;
+    font-size: 30px;
     color: white;
-    font-family: 'System Font Logo', serif;
+    font-family: 'System Font Logo', sans-serif;
 }
+
+.logo-small {
+    text-decoration: none;
+    font-size: 2.7vw;
+    color: white;
+    font-family: 'System Font Logo', sans-serif;
+}
+
+.logo-ultra-small {
+    text-decoration: none;
+    font-size: 1.8vw;
+    color: white;
+    font-family: 'System Font Logo', sans-serif;
+}
+
 
 .right-section {
     display: flex;
@@ -49,22 +140,22 @@ header {
     gap: 40px;
 }
 
-nav ul {
+.right-section nav ul {
     display: flex;
     list-style: none;
     gap: 20px;
     margin: 0;
     padding: 0;
-
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #FFFFFFB3;
     font-size: 16px;
 }
 
-nav ul li a:hover {
+.right-section nav ul li a {
+    text-decoration: none;
+    color: #FFFFFFB3;
+
+}
+
+.right-section nav ul li a:hover {
     color: white;
 }
 
@@ -78,11 +169,10 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 1vw;
+
 }
 
-.contact-details span {
-    font-size: 16px;
-}
 
 .button {
     background-color: #007bff;
@@ -90,7 +180,7 @@ nav ul li a:hover {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -103,7 +193,7 @@ nav ul li a:hover {
 .hero {
     position: relative;
     height: 100vh;
-    background: url('img/preview.webp') no-repeat center center/cover;
+    background: url('img/preview-darken.webp') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,7 +267,7 @@ nav ul li a:hover {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     padding: 0 10%;
     margin-bottom: 150px;
@@ -225,7 +315,7 @@ nav ul li a:hover {
     width: 100%;
     text-align: center;
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 32px;
     font-weight: bold;
     padding: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -315,6 +405,93 @@ footer nav ul li a:hover {
 
 
 
+/*<-----------about.html----------------->*/
+
+.about {
+    background-color: #f9f9f9;
+    color: #111;
+    margin-top: 120px;
+    font-family: Arial, sans-serif;
+    padding-left: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 40px;
+}
+
+
+.about h1 {
+    font-size: 36px;
+    color: #333;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.about-content p,
+.about-content h2,
+.about-content ul {
+    font-size: 18px;
+    color: #555;
+    text-align: left;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.about h2 {
+    font-size: 28px;
+    color: #333;
+    margin-top: 40px;
+}
+
+.about-image {
+    margin-left: 100px;
+    margin-top: 50px;
+    width: 75%;
+    padding-bottom: 150px;
+    border-radius: 12px;
+}
+
+.advantages {
+
+    background-color: #f9f9f9;
+    color: #111;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.advantages h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.advantages-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.advantage-item {
+    width: 250px; /* Fixed width for items */
+    text-align: center;
+}
+
+.advantage-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.advantage-item h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.advantage-item p {
+    font-size: 14px;
+    color: #111;
+}
 
 
 
@@ -322,6 +499,132 @@ footer nav ul li a:hover {
 
 
 
+
+
+/*<----media block--->*/
+
+@media screen and (max-width: 479px) {
+    .services-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /*<---logo block--->*/
+    .logo-ultra-small {
+        display: none;
+    }
+    .logo-big {
+        display: none;
+    }
+    .contact-details {
+        display: none;
+    }
+
+    .right-section a {
+        font-size: 12px;
+    }
+
+    .button {
+        font-size: 12px;
+    }
+    .right-section {
+        gap: 7px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .contact-details {
+        display: none;
+    }
+    .logo-ultra-small {
+        display: none;
+    }
+    .logo-big {
+        display: none;
+    }
+
+    .right-section a {
+        font-size: 14px;
+    }
+
+    .right-section {
+        gap: 15px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .button {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /*<---logo block--->*/
+    .logo-ultra-small {
+        display: none;
+    }
+    .logo-big {
+        display: none;
+    }
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .button {
+        font-size: 15px;
+    }
+
+    .right-section nav ul li a {
+        font-size: 17px;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    /*<---logo block--->*/
+    .logo-ultra-small {
+        display: none;
+    }
+    .logo-small {
+        display: none;
+    }
+    .right-section nav ul li a {
+        font-size: 22px;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .schedule {
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width: 1773px) {
+    .schedule-grid div {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1587px) {
+    .schedule-grid div {
+        font-size: 12px;
+    }
+    .schedule-grid div.header {
+        padding: 10px;
+        line-height: 4px;
+    }
+
+}
 
 
 
