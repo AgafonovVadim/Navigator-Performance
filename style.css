@@ -405,6 +405,96 @@ footer nav ul li a:hover {
 
 
 
+/*<-----------about.html----------------->*/
+
+.about {
+    background-color: #f9f9f9;
+    color: #111;
+    margin-top: 120px;
+    font-family: Arial, sans-serif;
+    padding-left: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 40px;
+}
+
+
+.about h1 {
+    font-size: 36px;
+    color: #333;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.about-content p,
+.about-content h2,
+.about-content ul {
+    font-size: 18px;
+    color: #555;
+    text-align: left;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.about h2 {
+    font-size: 28px;
+    color: #333;
+    margin-top: 40px;
+}
+
+.about-image {
+    margin-left: 100px;
+    margin-top: 50px;
+    width: 75%;
+    padding-bottom: 150px;
+    border-radius: 12px;
+}
+
+.advantages {
+
+    background-color: #f9f9f9;
+    color: #111;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.advantages h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.advantages-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.advantage-item {
+    width: 250px; /* Fixed width for items */
+    text-align: center;
+}
+
+.advantage-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.advantage-item h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.advantage-item p {
+    font-size: 14px;
+    color: #111;
+}
+
+
+
 
 
 
