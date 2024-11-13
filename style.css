@@ -96,7 +96,9 @@ body {
     margin: 0;
 }
 
-
+main {
+    margin-top: 120px;
+}
 
 header {
     position: fixed;
@@ -410,7 +412,6 @@ footer nav ul li a:hover {
 .about {
     background-color: #f9f9f9;
     color: #111;
-    margin-top: 120px;
     font-family: Arial, sans-serif;
     padding-left: 200px;
     display: grid;
@@ -514,8 +515,67 @@ footer nav ul li a:hover {
 
 
 
+/*<--------------constructor------------------>*/
+
+.form {
+    margin-bottom: 15px;
+}
+
+input, select {
+    width: 130px;
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
 
 
+.button-construct {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.lesson-input {
+    display: block;
+    margin-top: 10px;
+    padding: 5px;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.schedule-container {
+    margin-top: 20px;
+    display: flex;
+}
+
+
+
+.day {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 5px;
+
+}
+
+
+.day h3 {
+    margin-top: 0;
+}
+
+.constructor {
+    margin-left: 25px;
+}
 
 
 /*<----media block--->*/
