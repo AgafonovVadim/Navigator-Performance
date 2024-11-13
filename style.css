@@ -494,6 +494,23 @@ footer nav ul li a:hover {
 }
 
 
+.contacts{
+    background-color: #f9f9f9;
+    color: #111;
+    margin-top: 120px;
+    font-family: Arial, sans-serif;
+    padding-left: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.contacts:nth-child(2) {
+    text-align: center;
+}
+
+
 
 
 
