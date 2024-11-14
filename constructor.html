@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="О нас - Navigator Performance, тюнинг-ателье премиум класса">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О нас | Navigator Performance</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="scripts/page_load_time.js"></script>
+</head>
+<body>
+<header>
+  <a class="logo-big" href="index.html">NAVIGATOR PERFORMANCE</a>
+  <a class="logo-small" href="index.html">NAVIGATOR</a>
+  <div class="right-section">
+    <nav>
+      <ul>
+        <li><a href="index.html#services">Услуги</a></li>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="constructor.html">Конструктор</a></li>
+        <li><a href="users.html ">Пользователи</a></li>
+      </ul>
+    </nav>
+
+    <div class="contact-info">
+      <div class="contact-details">
+        <span>Служба продаж</span>
+        <span>+7 812 488-0-488</span>
+      </div>
+      <button class="button">Записаться</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="constructor" id="constructor">
+  <h2>Конструктор расписания</h2>
+  <form id="schedule-form" class="form">
+    <label for="days">Количество дней:</label>
+    <select id="days">
+      <option value="5">5 дней</option>
+      <option value="6">6 дней</option>
+    </select>
+
+    <label for="lessons">Максимум занятий в день:</label>
+    <input type="number" id="lessons" min="1" max="8" value="6">
+
+    <label for="language">Язык таблицы:</label>
+    <select id="language">
+      <option value="ru">Русский</option>
+      <option value="en">English</option>
+    </select>
+
+    <button class="button-construct" type="submit">Сгенерировать</button>
+  </form>
+
+  <button class="button-construct" id="save-settings">Сохранить настройки</button>
+  <button class="button-construct" id="load-settings">Загрузить настройки</button>
+  <button class="button-construct" id="clear-settings">Очистить настройки</button>
+
+  <div class="schedule-container" id="schedule-container"></div>
+  </section>
+</main>
+
+<script src="scripts/schedule.js"></script>
+</body>
+<footer>
+  <nav>
+    <ul>
+      <li><a href="#about">О нас</a></li>
+      <li><a href="#help">Помощь</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+  </nav>
+
+  <div class="copyright">
+    &copy; 2024 Navigator Performance
+  </div>
+</footer>
+</html>
