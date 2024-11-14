@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const saveSettingsBtn = document.getElementById('save-settings');
     const loadSettingsBtn = document.getElementById('load-settings');
     const clearSettingsBtn = document.getElementById('clear-settings');
+    const section = document.getElementById('constructor');
 
 
     function generateSchedule() {
@@ -53,15 +54,14 @@ document.addEventListener('DOMContentLoaded', () => {
             languageSelect.value = savedSettings.language;
             generateSchedule();
             setScheduleData(savedSettings.schedule);
-            alert('Настройки и расписание загружены!');
         }
     }
 
 
     function clearSettings() {
+        styling();
         localStorage.removeItem('scheduleSettings');
         scheduleContainer.innerHTML = '';
-        alert('Настройки и расписание очищены!');
     }
 
 
@@ -79,6 +79,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return scheduleData;
     }
 
+    function styling() {
+        section.classList.remove('constructor-new');
+        section.classList.add('constructor');
+    }
 
     function setScheduleData(scheduleData) {
         const dayDivs = document.querySelectorAll('.day');
@@ -93,6 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     form.addEventListener('submit', (event) => {
+        section.classList.remove('constructor');
+        section.classList.add('constructor-new');
         event.preventDefault();
         generateSchedule();
     });

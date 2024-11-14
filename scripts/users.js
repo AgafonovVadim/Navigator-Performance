@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadButton = document.getElementById('load-users');
     const preloader = document.getElementById('preloader');
     const usersContainer = document.getElementById('users-container');
+    const section = document.getElementById('constructor');
 
     let isFirstLoad = true;
 
@@ -13,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
         preloader.classList.remove('hidden');
         usersContainer.innerHTML = '';
 
-        // Псевдо-случайная фильтрация для запроса
         let url;
         if (isFirstLoad) {
             url = 'https://jsonplaceholder.typicode.com/users?&_start=0&_limit=5';
@@ -31,12 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const users = await response.json();
             preloader.classList.add('hidden');
+            restyle();
             renderUsers(users);
         } catch (error) {
             preloader.classList.add('hidden');
             usersContainer.innerHTML = `<div class="error">⚠ Что-то пошло не так: ${error.message}</div>`;
         }
     }
+    function restyle() {
+        section.classList.remove('constructor');
+        section.classList.add('constructor-new');
+    }
+
 
     function renderUsers(users) {
         usersContainer.innerHTML = users.map(user => `

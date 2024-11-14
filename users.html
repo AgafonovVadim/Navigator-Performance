@@ -34,14 +34,15 @@
 </header>
 
 <main>
-    <h2>Пользователи</h2>
-    <button id="load-users">Загрузить пользователей</button>
+    <section class="constructor" id="constructor">
+    <h2 class="users" >Пользователи</h2>
+    <button class="button-construct footer-margin" id="load-users">Загрузить пользователей</button>
 
-    <!-- Preloader -->
     <div id="preloader" class="hidden">Загрузка...</div>
 
-    <!-- Контейнер для отображения пользователей -->
+
     <div id="users-container"></div>
+    </section>
 </main>
 
 <footer>
@@ -56,8 +57,9 @@
     <div class="copyright">
         &copy; 2024 Navigator Performance
     </div>
+
 </footer>
-<script src="scripts/users.js"></script>
+<script src="scripts/users.js" defer></script>
 </body>
 <footer>
     <nav>
