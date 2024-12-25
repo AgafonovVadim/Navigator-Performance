@@ -1,6 +1,6 @@
 # Navigator-Performance
 
-**Автор:** Agafonov Vadim
+**Author:** Agafonov Vadim
 
 The repository is dedicated to the website of the car tuning studio.
 
