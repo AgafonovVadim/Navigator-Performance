@@ -1,6 +1,6 @@
 # Navigator-Performance
 
-**Автор:** Агафонов Вадим M3310 367787
+**Автор:** Agafonov Vadim
 
 The repository is dedicated to the website of the car tuning studio.
 
