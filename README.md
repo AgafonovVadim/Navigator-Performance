@@ -32,25 +32,25 @@ Navigator-Performance is designed to:
 ```bash
 git clone https://github.com/AgafonovVadim/Navigator-Performance.git
 cd Navigator-Performance
-
+```
 Install Dependencies
 
 For the backend (NestJS):
-
+```bash
 npm install
-
+```
 Configure Environment Variables
 
 Running the Application
 
 For development:
-
+```bash
 npm run start:dev
-
+```
 For production:
-
+```bash
 npm run start:prod
-
+```
 The application will listen on the port specified in the PORT environment variable, or default to a predefined port if not set.
 
 Deploying on Render
