@@ -53,18 +53,16 @@ npm run start:prod
 ```
 The application will listen on the port specified in the PORT environment variable, or default to a predefined port if not set.
 
-Deploying on Render
+## Deploying on Render
 
 Navigator-Performance is configured for deployment on Render. Render automatically provides the PORT environment variable, so you don’t need to manually configure the server port when deploying. Ensure your local .env file is set up correctly for development.
 
-Contributing
+## Contributing
 
 We welcome feedback and contributions! If you have ideas or suggestions:
 	•	Open an issue in the repository
 	•	Contact the author directly through the contact form on the website.
 
-License
+## License
 
 This project is licensed under the GPL-3.0 License.
-
-© 2025 Agafonov Vadim
