@@ -1,0 +1,25 @@
+<footer>
+  <nav>
+    <ul>
+      <li><a href="/about">О нас</a></li>
+      <li><a href="#help">Помощь</a></li>
+      <li><a href="/contacts">Контакты</a></li>
+    </ul>
+  </nav>
+  <div class="registration-container">
+    <div id="registrationDiv">
+      <h2>Регистрация</h2>
+      <input type="text" id="username" placeholder="Имя пользователя">
+      <input type="password" id="password" placeholder="Пароль">
+      <button id="registerButton">Зарегистрироваться</button>
+    </div>
+    <!-- Состояние авторизации (для авторизованных пользователей) -->
+    <div id="loggedInDiv" style="display: none;">
+      <h2>Добро пожаловать, <span id="displayUsername"></span>!</h2>
+      <button id="logoutButton">Выйти</button>
+    </div>
+  </div>
+  <div class="copyright">
+    &copy; 2024 Navigator Performance
+  </div>
+</footer>

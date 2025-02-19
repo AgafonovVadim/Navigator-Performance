@@ -7,6 +7,8 @@
     <title>О нас | Navigator Performance</title>
     <link rel="stylesheet" href="style.css">
     <script src="scripts/page_load_time.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/yup@1.4.0/index.js"></script>
+    <script src="scripts/active_page.js" defer></script>
 </head>
 <body>
 <header>
@@ -15,11 +17,11 @@
     <div class="right-section">
         <nav>
             <ul>
-                <li><a href="index.html#services">Услуги</a></li>
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-                <li><a href="constructor.html">Конструктор</a></li>
-                <li><a href="users.html ">Пользователи</a></li>
+                <li><a class="menu-link" href="index.html#services">Услуги</a></li>
+                <li><a class="menu-link" href="about.html">О нас</a></li>
+                <li><a class="menu-link" href="contacts.html">Контакты</a></li>
+
+                <li><a class="menu-link" href="users.html ">Пользователи</a></li>
             </ul>
         </nav>
 
@@ -28,7 +30,8 @@
                 <span>Служба продаж</span>
                 <span>+7 812 488-0-488</span>
             </div>
-            <button class="button">Записаться</button>
+            <button class="button" id="appointment-button">Записаться</button>
+            <script src="scripts/appointment.js"></script>
         </div>
     </div>
 </header>
@@ -61,17 +64,4 @@
 </footer>
 <script src="scripts/users.js" defer></script>
 </body>
-<footer>
-    <nav>
-        <ul>
-            <li><a href="#about">О нас</a></li>
-            <li><a href="#help">Помощь</a></li>
-            <li><a href="#contacts">Контакты</a></li>
-        </ul>
-    </nav>
-
-    <div class="copyright">
-        &copy; 2024 Navigator Performance
-    </div>
-</footer>
 </html>

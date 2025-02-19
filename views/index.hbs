@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+{{> head }}
+<body>
+{{> header }}
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Тюнинг-ателье нового уровня</h1>
+      <p>Эстетичность, эффектность, безупречность</p>
+      <div class="buttons">
+        <button class="left-button">Связаться с нами</button>
+        <button class="right-button">Выполненные работы</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <h2>Услуги</h2>
+    <div class="services-grid">
+      <div class="service-item">
+        <img src="/img/detailing.webp" alt="Детейлинг">
+        <div class="service-text">Детейлинг</div>
+      </div>
+      <div class="service-item">
+        <img src="/img/power2.jpg" alt="Мощностной тюнинг">
+        <div class="service-text">Мощностной тюнинг</div>
+      </div>
+      <div class="service-item">
+        <img src="/img/hypercar.jpg" alt="ТО суперкаров">
+        <div class="service-text">ТО суперкаров</div>
+      </div>
+      <div class="service-item">
+        <img src="/img/lc200.jpg" alt="Выездное обслуживание">
+        <div class="service-text">Выездное обслуживание</div>
+      </div>
+      <div class="service-item">
+        <img src="/img/extra_porsche.jpg" alt="Кузовные доработки">
+        <div class="service-text">Кузовные доработки</div>
+      </div>
+      <div class="service-item">
+        <img src="/img/competition.jpg" alt="Подготовка к соревнованиям">
+        <div class="service-text">Подготовка к соревнованиям</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="schedule">
+    <h2>Запись</h2>
+    <div class="schedule-grid" id="scheduleGrid">
+    </div>
+  </section>
+
+  <script src="/date.js"></script>
+
+  <article class="quote">
+    <blockquote class="quote-block">
+      <div class="quote-symbol">“”</div>
+      <p class="quote-text">
+        Все началось с того, что я огляделся по сторонам и, не увидев автомобиля своей мечты, решил сконструировать его сам
+      </p>
+      <cite class="quote-author">— Фердинанд Порше</cite>
+    </blockquote>
+  </article>
+</main>
+
+{{> footer }}
+</body>
+</html>

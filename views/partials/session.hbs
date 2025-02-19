@@ -1,0 +1,7 @@
+{{#unless session.loggedIn}}
+  {{#unless hideSession}}
+    <div class="session-info">
+      <p>🔒 Вы пока не зарегистрированы. (<a href="/login">Вход</a> | <a href="/register">Регистрация</a>)</p>
+    </div>
+  {{/unless}}
+{{/unless}}
