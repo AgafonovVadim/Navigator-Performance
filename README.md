@@ -20,7 +20,7 @@ Navigator-Performance is designed to:
 
 ## Technologies
 
-- **Backend:** [NestJS](https://nestjs.com/), Node.js, Express (internally via NestJS)
+- **Backend:** [NestJS](https://nestjs.com/), Node.js, Express (internally via NestJS), Handlebars.
 - **Frontend:** HTML5, CSS3, JavaScript
 - **Development Tools:** Git, VS Code, Docker (optional)
 - **Hosting:** Render
