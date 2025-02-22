@@ -65,7 +65,7 @@ Navigator-Performance is configured for deployment on Render. Render automatical
 
 We welcome feedback and contributions! If you have ideas or suggestions:
 	•	Open an issue in the repository
-	•	Contact the author directly through the contact form on the website.
+	•	Contact the author directly.
 
 ## License
 
