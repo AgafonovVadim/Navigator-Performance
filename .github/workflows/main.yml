@@ -50,21 +50,21 @@ jobs:
       - name: Deploy Application Locally
         run: |
           echo "Starting application..."
-
-          func() {
-                   for i in {1..30}; do
-                      HTTP_STATUS=$(curl -o /dev/null -s -w "%{http_code}" http://localhost:3000)
-                      if [ "$HTTP_STATUS" -eq 200 ]; then
-                        echo "Application is running!"
-                        kill -9 $1
-                        exit 0
-                      fi
-                      echo "Application not available yet. Waiting 10 seconds..."
-                      sleep 10
-                    done
-          }
           npm start &
           DEPLOY_PID=$!
+          func() {
+                for i in {1..30}; do
+                  HTTP_STATUS=$(curl -o /dev/null -s -w "%{http_code}" http://localhost:3000 || echo "000")
+                  echo "Attempt $i: HTTP status = $HTTP_STATUS"
+                  if [ "$HTTP_STATUS" -eq 200 ]; then
+                    echo "Application is running!"
+                    kill -9 $DEPLOY_PID
+                    exit 0
+                  fi
+                  echo "Application not available yet. Waiting 10 seconds..."
+                  sleep 10
+                done
+          }
           func $DEPLOY_PID
           echo "Application did not start in time."
           kill $DEPLOY_PID
