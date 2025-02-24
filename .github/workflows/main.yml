@@ -4,9 +4,68 @@ on: [push]
 
 
 jobs:
-  build:
+  build-test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Lint
+        run: npm run lint
+
+      - name: Run Tests
+        run: npm run test
+
+      - name: Build Application
+        run: npm run build
+
+  deploy:
+    needs: build-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      - name: Install Dependencies
+        run: npm ci
+
+
+      - name: Deploy Application Locally
+        run: |
+          echo "Starting application..."
+          npm start &
+          DEPLOY_PID=$!
+          func() {
+                for i in {1..30}; do
+                  HTTP_STATUS=$(curl -o /dev/null -s -w "%{http_code}" http://localhost:9418 || echo "000")
+                  echo "Attempt $i: HTTP status = $HTTP_STATUS"
+                  if [ "$HTTP_STATUS" -eq 200 ]; then
+                    echo "Application is running!"
+                    kill -9 $DEPLOY_PID
+                    exit 0
+                  fi
+                  echo "Application not available yet. Waiting 10 seconds..."
+                  sleep 10
+                done
+          }
+          func $DEPLOY_PID
+          echo "Application did not start in time."
+          kill $DEPLOY_PID
+          exit 1

@@ -20,7 +20,7 @@ Navigator-Performance is designed to:
 
 ## Technologies
 
-- **Backend:** [NestJS](https://nestjs.com/), Node.js, Express (internally via NestJS), Handlebars.
+- **Backend:** [NestJS](https://nestjs.com/), Node.js, Express (internally via NestJS)
 - **Frontend:** HTML5, CSS3, JavaScript
 - **Development Tools:** Git, VS Code, Docker (optional)
 - **Hosting:** Render
@@ -57,15 +57,11 @@ The application will listen on the port specified in the PORT environment variab
 
 Navigator-Performance is configured for deployment on Render. Render automatically provides the PORT environment variable, so you don’t need to manually configure the server port when deploying. Ensure your local .env file is set up correctly for development.
 
-# Link
-### [NAVIGATOR-PERFORMANCE](https://m3310-agafonov.onrender.com/)
-
-
 ## Contributing
 
 We welcome feedback and contributions! If you have ideas or suggestions:
 	•	Open an issue in the repository
-	•	Contact the author directly.
+	•	Contact the author directly through the contact form on the website.
 
 ## License
 
