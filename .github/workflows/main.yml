@@ -51,7 +51,7 @@ jobs:
         run: |
           echo "Starting application..."
 
-          npm run &
+          npm start &
           DEPLOY_PID=$!
           echo "Waiting for application to be available on http://localhost:3000..."
 
