@@ -57,10 +57,6 @@ The application will listen on the port specified in the PORT environment variab
 
 Navigator-Performance is configured for deployment on Render. Render automatically provides the PORT environment variable, so you don’t need to manually configure the server port when deploying. Ensure your local .env file is set up correctly for development.
 
-# Link
-### [NAVIGATOR-PERFORMANCE](https://m3310-agafonov.onrender.com/)
-
-
 ## Contributing
 
 We welcome feedback and contributions! If you have ideas or suggestions:
