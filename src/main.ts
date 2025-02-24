@@ -14,7 +14,7 @@ async function bootstrap() {
   hbs.registerPartials(join(__dirname, '..', 'views/partials'));
   const configService = app.get(ConfigService);
   const port = configService.get<number>('PORT', 3000);
-  await app.listen(port);
+  await app.listen(9418);
 }
 
 void bootstrap().then(() =>
