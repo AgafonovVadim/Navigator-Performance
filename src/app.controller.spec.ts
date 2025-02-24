@@ -13,5 +13,8 @@ describe('AppController', () => {
 
     appController = app.get<AppController>(AppController);
   });
-  describe('getIndexPage', () => {});
+
+  it('should be defined', () => {
+    expect(appController).toBeDefined();
+  });
 });
