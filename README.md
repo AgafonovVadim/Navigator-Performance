@@ -1,6 +1,4 @@
-# Navigator-Performance
-
-[![GitHub stars](https://img.shields.io/github/stars/AgafonovVadim/Navigator-Performance?style=social)](https://github.com/AgafonovVadim/Navigator-Performance/stargazers)
+# Navigator-Performance [![GitHub stars](https://img.shields.io/github/stars/AgafonovVadim/Navigator-Performance?style=social)](https://github.com/AgafonovVadim/Navigator-Performance/stargazers)
 
 Navigator-Performance is a modern web application for a car tuning studio. It showcases exclusive tuning services by seamlessly integrating both frontend and backend systems built on modern technologies such as Node.js and NestJS.
 
